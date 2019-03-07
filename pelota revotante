@@ -1,0 +1,46 @@
+class Ball {
+	constructor () {
+		this.x = random (0, 400);
+		this.y = random (0, 400);
+		this.tam = 50;
+		this.velx = 3;
+		this.vely = 3;
+		this.color = fill (random (0,255), random (0,255), random (0,255));
+	}
+	mostrar () {
+		ellipse (this.x, this.y, this.tam, this.tam);
+	}
+	moverx () {
+		this.x = this.x + this.velx;
+	}
+	salirx () {
+		 var res;
+ if (this.x <25 || this.x> 375) {	
+	 res = true;
+ } else { 
+	 res = false;
+ }
+			 return res;
+		 }
+botarx () {
+	this.y = this.velx *-1
+}
+	movery () {
+		this.y = this.vely + this.vely;
+	}
+	salir () {
+		var res;
+if (this.y <25 ||	this.y> 375) {
+res = true;		
+} else {
+	res = false;
+}
+		return res;
+	}
+	botary () {
+		 this.vely = this.vely * 1
+	}
+}
+		
+    
+    
